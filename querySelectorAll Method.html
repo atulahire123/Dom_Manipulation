@@ -1,0 +1,49 @@
+<html>
+<div id="header" style="padding: 1rem 0; background-color: lightblue">
+    <h1 id="main-heading" style="margin: 0">Fruit Shop</h1>
+  </div>
+  <div>
+    <h2 id="basket-heading">Fruits In Basket</h2>
+    <ul class="fruits">
+      <li class="fruit">Banana</li>
+      <li class="fruit">Apple</li>
+      <li class="fruit">Orange</li>
+      <li class="fruit">Kiwi</li>
+    </ul>
+  </div>
+  <div id="thanks"></div>
+</body>
+<script>// Write the code as shown in the video below:
+    const mainHeading = document.querySelector('h1');
+    mainHeading.style.textAlign ='right';
+    
+    const fruits = document.querySelector('.fruits');
+    fruits.style.backgroundColor = 'gray';
+    fruits.style.padding = '30px';
+    fruits.style.margin = '30px';
+    fruits.style.width = '50%';
+    fruits.style.borderRadius = '5px';
+    fruits.style.listStyleType = 'none';
+    
+    const basketHeading = document.querySelector('h2');
+    basketHeading.style.marginLeft = '30px';
+    basketHeading.style.color = 'brown';
+    // QuerySelectorAll is used to grab all the elements with the same class
+    const fruitItems = document.querySelectorAll('.fruit');
+    
+    for (let i = 0; i < fruitItems.length; i++) {
+        fruitItems[i].style.backgroundColor = 'white';
+        fruitItems[i].style.padding = '15px';
+        fruitItems[i].style.margin = '1px';
+        fruitItems[i].style.borderRadius = '10px';
+    }
+    
+    // QuerySelectorAll is used to grab all even elements with the class 'fruit'
+    const evenFruitItems = document.querySelectorAll('.fruit:nth-child(even)');
+    for (let i = 0; i < evenFruitItems.length; i++) {
+        evenFruitItems[i].style.backgroundColor = 'brown';
+      evenFruitItems[i].style.color='white';
+    }
+    const additionalItems = document.querySelectorAll('.additional-class');
+    </script>
+</html>

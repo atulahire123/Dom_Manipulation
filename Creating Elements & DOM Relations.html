@@ -1,0 +1,31 @@
+<html>
+<div id="header" style="padding: 1rem 0; background-color: lightblue">
+    <h1 id="main-heading" style="margin: 0">Fruit Shop</h1>
+  </div>
+  <div>
+    <h2 id="basket-heading">Fruits In Basket</h2>
+    <ul class="fruits">
+      <li class="fruit">Banana</li>
+      <li class="fruit">Apple</li>
+      <li class="fruit">Orange</li>
+      <li class="fruit">Kiwi</li>
+    </ul>
+  </div>
+  <div id="thanks"></div>
+</body>
+<script>const subHeading = document.createElement('h3');
+    subHeading.textContent = 'Buy high quality organic fruits online';
+    subHeading.style.fontStyle = 'italic';
+    
+    const header = document.getElementById('header');
+    header.appendChild(subHeading);
+    
+    // Add a paragraph before the unordered list in the second div
+    const totalFruitsParagraph = document.createElement('p');
+    totalFruitsParagraph.textContent = 'Total fruits: 4';
+    totalFruitsParagraph.id = 'fruits-total';
+    
+    const secondDiv = document.querySelector('div:nth-child(2)');
+    secondDiv.insertBefore(totalFruitsParagraph, secondDiv.querySelector('ul'));
+    </script>
+</html>

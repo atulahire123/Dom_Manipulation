@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+<style>
+    form {
+  background-color: pink;
+  padding: 25px;
+}
+
+/* Set height for the input element with type "text" using attribute selector */
+input[type="text"] {
+  height: 25px;
+}
+
+/* Use attribute selector to change font style of the label with "for" attribute */
+label[for="name"] {
+  font-style: italic;
+}
+
+/* Give both buttons a class name of "btn" and apply styles using the class name */
+button {
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 25px;
+  border: none;
+}
+
+</style>
+
+<body>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name"> <!-- Add id="name" to the input element -->
+    <br>
+    <button type="submit" class="btn">Submit</button>
+    <button type="reset" class="btn">Reset</button>
+  </form>
+</body>
+
+</html>
